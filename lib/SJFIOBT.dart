@@ -224,6 +224,7 @@ class _SJFIOBTState extends State<SJFIOBT> {
       tbt[i] = _data[i][1] + _data[i][3];
     }
     while (cal != 2 * _counter) {
+      _readyq.add(List.filled(_counter, false));
       var mn = 100, loc = 0;
       bool f = true;
       for (var i = 0; i < _counter; ++i) {
