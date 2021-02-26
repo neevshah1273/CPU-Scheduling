@@ -167,7 +167,7 @@ class _PriorityState extends State<Priority> {
       }
       _readyq.add(List.filled(_counter, false));
       for (var i = 0; i < _counter; ++i) {
-        if (st >= max(_data[loc][1], st) && !vis[i]) {
+        if (_data[i][1] <= st && !vis[i]) {
           _readyq[_tt][i]=true;
         }
       }
